@@ -1,5 +1,5 @@
-[ ESE 2014 Wiki](https://github.com/ese-unibe-ch/ese2014-wiki/wiki)
+[ ESE 2015 Wiki](https://github.com/unibe-ese/course-wiki/wiki)
 ============
 
-Assignments and material published on the <a href="https://github.com/ese-unibe-ch/ese2014-wiki/wiki">wiki</a>. 
+Assignments and material published on the <a href="https://github.com/unibe-ese/course-wiki/wiki">wiki</a>. 
 The project skeleton can be found in the repository.
