@@ -37,24 +37,24 @@
 		</repository>
 	</repositories>
 
-	<build>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<excludes>
-					<exclude>*.xml</exclude>
-				</excludes>
-				<filtering>true</filtering>
-			</resource>
-			<resource>
-				<directory>src/main/resources</directory>
-				<includes>
-					<include>*.xml</include>
-				</includes>
-				<filtering>false</filtering>
-			</resource>
-		</resources>
-	</build>
+<!-- 	<build> -->
+<!-- 		<resources> -->
+<!-- 			<resource> -->
+<!-- 				<directory>src/main/resources</directory> -->
+<!-- 				<excludes> -->
+<!-- 					<exclude>*.xml</exclude> -->
+<!-- 				</excludes> -->
+<!-- 				<filtering>true</filtering> -->
+<!-- 			</resource> -->
+<!-- 			<resource> -->
+<!-- 				<directory>src/main/resources</directory> -->
+<!-- 				<includes> -->
+<!-- 					<include>*.xml</include> -->
+<!-- 				</includes> -->
+<!-- 				<filtering>false</filtering> -->
+<!-- 			</resource> -->
+<!-- 		</resources> -->
+<!-- 	</build> -->
 
 	<dependencies>
 
@@ -112,27 +112,27 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>3.2.1.RELEASE</version>
+			<version>4.2.1.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>3.2.1.RELEASE</version>
+			<version>4.2.1.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>3.2.1.RELEASE</version>
+			<version>4.2.1.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>3.2.1.RELEASE</version>
+			<version>4.2.1.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>3.2.1.RELEASE</version>
+			<version>4.2.1.RELEASE</version>
 		</dependency>
 
 		<dependency>

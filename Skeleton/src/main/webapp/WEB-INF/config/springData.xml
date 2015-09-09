@@ -17,7 +17,7 @@
 
     <bean id="mainDataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver" />
-        <property name="jdbcUrl" value="jdbc:mysql://localhost/ESE?autoReconnect=true&amp;createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost/EseDB?autoReconnect=true&amp;createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8" />
         <property name="username" value="root"/>
         <property name="password" value=""/>
         <property name="idleConnectionTestPeriodInMinutes" value="60"/>
