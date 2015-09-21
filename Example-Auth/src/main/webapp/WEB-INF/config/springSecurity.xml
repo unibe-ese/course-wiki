@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<security:http auto-config="true" use-expressions="true" access-denied-page="/auth/denied">
+
+		<security:intercept-url pattern="/login" access="permitAll" />
+		<security:intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')" />
+		<security:form-login login-page="/login" authentication-failure-url="/login?error=true" default-target-url="/main" />
+		<security:logout invalidate-session="true" logout-success-url="/login" logout-url="/logout" />
+
+	</security:http>
+
+	<!-- Declare an authentication-manager to use a custom userDetailsService -->
+	<security:authentication-manager>
+		<security:authentication-provider	user-service-ref="userDetailsService">
+			<security:password-encoder ref="passwordEncoder" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+	<!-- Use a Md5 encoder since the user's passwords are stored as Md5 in the 
+		database -->
+	<bean class="org.springframework.security.authentication.encoding.Md5PasswordEncoder"	id="passwordEncoder" />
+
+	<!-- An in-memory list of users. No need to access an external database 
+		layer. See Spring Security 3.1 Reference 5.2.1 In-Memory Authentication -->
+	<!-- john's password is admin, while jane;s password is user -->
+	<security:user-service id="userDetailsService">
+		<security:user name="john" password="21232f297a57a5a743894a0e4a801fc3"
+			authorities="ROLE_USER, ROLE_ADMIN" />
+		<security:user name="jane" password="ee11cbb19052e40b07aac0ca060c23ee"
+			authorities="ROLE_USER" />
+	</security:user-service>
+
+</beans>
