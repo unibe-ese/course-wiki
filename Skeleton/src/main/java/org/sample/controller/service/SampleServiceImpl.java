@@ -16,10 +16,9 @@ import org.springframework.util.StringUtils;
 public class SampleServiceImpl implements SampleService {
 
     @Autowired    UserDao userDao;
-    @Autowired    AddressDao addDao;
     
     @Transactional
-    public SignupForm saveFrom(SignupForm signupForm) throws InvalidUserException{
+    public User saveForm(SignupForm signupForm) throws InvalidUserException{
 
         String firstName = signupForm.getFirstName();
 
@@ -36,17 +35,9 @@ public class SampleServiceImpl implements SampleService {
         user.setEmail(signupForm.getEmail());
         user.setLastName(signupForm.getLastName());
         user.setAddress(address);
-        
-        user = userDao.save(user);   // save object to DB
-        
-        
-        // Iterable<Address> addresses = addDao.findAll();  // find all 
-        // Address anAddress = addDao.findOne((long)3); // find by ID
-        
-        
-        signupForm.setId(user.getId());
-
-        return signupForm;
-
+                
+        user = userDao.save(user); 
+       
+        return user;
     }
 }

@@ -3,19 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-    <bean id="userDaoMock" class="org.mockito.Mockito" factory-method="mock">
+	
+	<!-- MOCK data access classes (DAO) -->
+    <bean class="org.mockito.Mockito" factory-method="mock">
         <constructor-arg value="org.sample.model.dao.UserDao"/>
     </bean>
-    <bean id="addDaoMock" class="org.mockito.Mockito" factory-method="mock">
+    <bean class="org.mockito.Mockito" factory-method="mock">
         <constructor-arg value="org.sample.model.dao.AddressDao"/>
     </bean>
-    <bean id="teamDaoMock" class="org.mockito.Mockito" factory-method="mock">
-        <constructor-arg value="org.sample.model.dao.TeamDao"/>
-    </bean>
-
-    <bean id="sampleService" class="org.sample.controller.service.SampleServiceImpl">
-        <property name="userDao" ref="userDaoMock"/>
-    </bean>
-
+   
+   <!-- AUTOWIRE services -->
+    <bean class="org.sample.controller.service.SampleServiceImpl" />
 
 </beans>

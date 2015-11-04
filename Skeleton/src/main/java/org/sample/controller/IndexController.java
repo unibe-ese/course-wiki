@@ -32,7 +32,7 @@ public class IndexController {
     	ModelAndView model;    	
     	if (!result.hasErrors()) {
             try {
-            	sampleService.saveFrom(signupForm);
+            	sampleService.saveForm(signupForm);
             	model = new ModelAndView("show");
             } catch (InvalidUserException e) {
             	model = new ModelAndView("index");
