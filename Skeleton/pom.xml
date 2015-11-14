@@ -255,7 +255,7 @@
 						<executions>
 							<execution>
 								<id>dicto-analyze</id>
-								<phase>post-integration-test</phase>
+								<phase>pre-integration-test</phase>
 								<goals>
 									<goal>dicto</goal>
 								</goals>
