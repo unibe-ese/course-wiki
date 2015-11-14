@@ -225,7 +225,7 @@
 			</activation>
 			<build>
 				<plugins>
-					<plugin>
+					<!-- <plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-compiler-plugin</artifactId>
 						<version>2.5.1</version>
@@ -242,7 +242,7 @@
 								<version>2.19</version>
 							</dependency>
 						</dependencies>
-					</plugin>
+					</plugin> -->
 
 					<!-- <plugin>
 						<groupId>ch.dicto</groupId>
