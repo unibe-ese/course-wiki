@@ -244,7 +244,7 @@
 						</dependencies>
 					</plugin>
 
-					<plugin>
+					<!-- <plugin>
 						<groupId>ch.dicto</groupId>
 						<artifactId>dicto-maven-plugin</artifactId>
 						<version>0.0.1-SNAPSHOT</version>
@@ -261,7 +261,7 @@
 								</goals>
 							</execution>
 						</executions>
-					</plugin>
+					</plugin> -->
 
 
 					<plugin>
