@@ -9,7 +9,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.custom.java.version>1.6</project.custom.java.version>
-      
+
 	</properties>
 	<repositories>
 		<repository>
@@ -273,6 +273,9 @@
 							<contextPath>/Skeleton</contextPath>
 							<stopKey>1</stopKey>
 							<stopPort>9999</stopPort>
+							<httpConnector>
+								<port>8888</port>
+							</httpConnector>
 						</configuration>
 						<executions>
 							<execution>
